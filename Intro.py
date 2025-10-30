@@ -103,18 +103,26 @@ with col3:
  st.subheader("tm ")
  url = "https://g8ww5stpf5eekifywa5mbt.streamlit.app"
  st.write(f" [Enlace]({url})")
+    
+st.subheader("Traductor")
+url = "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"
+st.write(f"[Abrir]({url})")
 
-st.subheader("traductor ")
- url = "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"
- st.write(f" [Enlace]({url})")
+st.subheader("Tx2_Analisis")
+url = "https://7ibuhcfwsvaamifxn984vx.streamlit.app"
+st.write(f"[Abrir]({url})")
 
-st.subheader("tx2_analisis ")
- url = "https://7ibuhcfwsvaamifxn984vx.streamlit.app"
- st.write(f" [Enlace]({url})")
+st.subheader("Vision_app")
+url = "https://visionapp-npw2s56o4vuqtnvrxrxv5n.streamlit.app"
+st.write(f"[Abrir]({url})")
 
-st.subheader("vision_app")
- url = "https://visionapp-npw2s56o4vuqtnvrxrxv5n.streamlit.app"
- st.write(f" [Enlace]({url})")
+st.subheader("Yolov5")
+url = "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app"
+st.write(f"[Abrir]({url})")
+
+st.markdown("---")
+st.caption("💗 Desarrollado por María José Velásquez — Portafolio de aplicaciones con IA 💻")
+
 
 st.subheader("yolov5 ")
  url = "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app"
