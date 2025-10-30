@@ -57,25 +57,69 @@ with col2:
 
 
 with col3: 
- st.subheader("Generación en Contexto")
+ st.subheader("intro")
  image = Image.open('Chat_pdf.png')
  st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
+ url = "https://gnj4sr3tzwfb2tuwcru6in.streamlit.app"
+ st.write(f" [Enlace]({url})")
 
- st.subheader("Análisis de Imagen")
+ st.subheader("ocr ")
  image = Image.open('OIG4.jpg')
  st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
+ url = "https://4ohjzp2brxgz8xgirrhxz2.streamlit.app"
+ st.write(f" [Enlace]({url})")
+
+ st.subheader("ocr-audio ")
  image = Image.open('OIG6.jpg')
  st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
+ url = "https://ocr-audio-4b6rtzrvvqybdrbkgxjvge.streamlit.app"
+ st.write(f" [Enlace]({url})")
 
+ st.subheader("recep_mqtt ")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://recepmqtt-bkharxblreeetctedowmsr.streamlit.app"
+ st.write(f" [Enlace]({url})")
+  
+ st.subheader("send_cmqtt  ")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://sendcmqtt-cvkmcjjdmz6lsgjgbuawix.streamlit.app"
+ st.write(f" [Enlace]({url})")
+
+ st.subheader("tf_idf ")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://ckv67faaexydbykhj23gqb.streamlit.app"
+ st.write(f" [Enlace]({url})")
+
+ st.subheader("tm ")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://g8ww5stpf5eekifywa5mbt.streamlit.app"
+ st.write(f" [Enlace]({url})")
+
+st.subheader("traductor ")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"
+ st.write(f" [Enlace]({url})")
+
+st.subheader("tx2_analisis ")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://7ibuhcfwsvaamifxn984vx.streamlit.app"
+ st.write(f" [Enlace]({url})")
+
+st.subheader("vision_app")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://visionapp-npw2s56o4vuqtnvrxrxv5n.streamlit.app"
+ st.write(f" [Enlace]({url})")
+
+st.subheader("yolov5 ")
+ image = Image.open('OIG6.jpg')
+ st.image(image, width=200)
+ url = "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app"
+ st.write(f" [Enlace]({url})")
 
