@@ -1,7 +1,6 @@
 import streamlit as st
-from PIL import Image
 
-# 💗 --- ESTILO PERSONALIZADO (fondo rosado y sidebar) ---
+# 💗 --- ESTILO PERSONALIZADO ---
 page_bg = """
 <style>
 [data-testid="stAppViewContainer"] {
@@ -26,105 +25,76 @@ a:hover {
     text-decoration: underline;
     color: #880e4f !important;
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.card h3 {
+    color: #c2185b;
+    margin-bottom: 0.5rem;
+}
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
 
 # --- Título principal ---
-st.title("Aplicaciones de Inteligencia Artificial")
+st.title("💗 Aplicaciones de Inteligencia Artificial")
 
 # --- Sidebar ---
 with st.sidebar:
     st.subheader("Aplicaciones con Inteligencia Artificial")
-    parrafo = (
+    st.write(
         "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
         "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
         "resulta en una mayor eficiencia y precisión en diversos campos."
     )
-    st.write(parrafo)
 
 # --- Enlace general ---
 url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
 st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
+st.write(f"🔗 [Abrir enlace general]({url_ia})")
 
-# --- Columnas principales ---
-col1, col2, col3 = st.columns(3)
+# --- Lista de proyectos ---
+projects = [
+    ("Analisis de texto", "https://dnmzepv2h4xmw6yxwzvcrr.streamlit.app"),
+    ("Chat PDF", "https://chatpdf-gwuf3xshqmb2cb4bjgkivd.streamlit.app"),
+    ("Ctrl_Voice", "https://ctrlvoice-jjdnyj4h7uqjkzdzjndskm.streamlit.app"),
+    ("DrawRecog", "https://drawrecog-ftmxxecetrks53qqf7ep5x.streamlit.app"),
+    ("Hand_W", "https://mtubb8lilvvh68zsisjjhy.streamlit.app"),
+    ("Imm1", "https://aetvf8ckuvwtmhegftsne8.streamlit.app"),
+    ("Intro", "https://gnj4sr3tzwfb2tuwcru6in.streamlit.app"),
+    ("OCR", "https://4ohjzp2brxgz8xgirrhxz2.streamlit.app"),
+    ("OCR-Audio", "https://ocr-audio-4b6rtzrvvqybdrbkgxjvge.streamlit.app"),
+    ("Recep_MQTT", "https://recepmqtt-bkharxblreeetctedowmsr.streamlit.app"),
+    ("Send_CMqtt", "https://sendcmqtt-cvkmcjjdmz6lsgjgbuawix.streamlit.app"),
+    ("TF_IDF", "https://ckv67faaexydbykhj23gqb.streamlit.app"),
+    ("TM", "https://g8ww5stpf5eekifywa5mbt.streamlit.app"),
+    ("Traductor", "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"),
+    ("Tx2_Analisis", "https://7ibuhcfwsvaamifxn984vx.streamlit.app"),
+    ("Vision_App", "https://visionapp-npw2s56o4vuqtnvrxrxv5n.streamlit.app"),
+    ("Yolov5", "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app")
+]
 
-# --- Columna 1 ---
-with col1:
-    st.subheader("Analisis de texto")
-    url = "https://dnmzepv2h4xmw6yxwzvcrr.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("Chat PDF")
-    url = "https://chatpdf-gwuf3xshqmb2cb4bjgkivd.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("Ctrl_voice")
-    url = "https://ctrlvoice-jjdnyj4h7uqjkzdzjndskm.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-# --- Columna 2 ---
-with col2:
-    st.subheader("Drawrecog")
-    url = "https://drawrecog-ftmxxecetrks53qqf7ep5x.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("Hand_W")
-    url = "https://mtubb8lilvvh68zsisjjhy.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("Imm1")
-    url = "https://aetvf8ckuvwtmhegftsne8.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-# --- Columna 3 ---
-with col3:
-    st.subheader("Intro")
-    url = "https://gnj4sr3tzwfb2tuwcru6in.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("OCR")
-    url = "https://4ohjzp2brxgz8xgirrhxz2.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("OCR-Audio")
-    url = "https://ocr-audio-4b6rtzrvvqybdrbkgxjvge.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("Recep_MQTT")
-    url = "https://recepmqtt-bkharxblreeetctedowmsr.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("Send_CMqtt")
-    url = "https://sendcmqtt-cvkmcjjdmz6lsgjgbuawix.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("TF_IDF")
-    url = "https://ckv67faaexydbykhj23gqb.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-    st.subheader("TM")
-    url = "https://g8ww5stpf5eekifywa5mbt.streamlit.app"
-    st.write(f"[Enlace]({url})")
-
-# --- Últimos proyectos debajo (sin vacío) ---
-st.subheader("Traductor")
-url = "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"
-st.write(f"[Enlace]({url})")
-
-st.subheader("Tx2_Analisis")
-url = "https://7ibuhcfwsvaamifxn984vx.streamlit.app"
-st.write(f"[Enlace]({url})")
-
-st.subheader("Vision_App")
-url = "https://visionapp-npw2s56o4vuqtnvrxrxv5n.streamlit.app"
-st.write(f"[Enlace]({url})")
-
-st.subheader("Yolov5")
-url = "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app"
-st.write(f"[Enlace]({url})")
+# --- Cuadrícula sin vacío ---
+html_grid = '<div class="grid">'
+for name, link in projects:
+    html_grid += f"""
+    <div class="card">
+        <h3>{name}</h3>
+        <a href="{link}" target="_blank">Abrir aplicación 🚀</a>
+    </div>
+    """
+html_grid += "</div>"
+st.markdown(html_grid, unsafe_allow_html=True)
 
 # --- Pie de página ---
 st.markdown("---")
