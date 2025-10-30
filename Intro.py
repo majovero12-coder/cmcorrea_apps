@@ -98,8 +98,6 @@ with col3:
     st.write(f"[Enlace]({url})")
 
     st.subheader("Send_CMqtt")
-    image = Image.open('OIG6.jpg')
-    st.image(image, width=200)
     url = "https://sendcmqtt-cvkmcjjdmz6lsgjgbuawix.streamlit.app"
     st.write(f"[Enlace]({url})")
 
@@ -131,5 +129,3 @@ st.write(f"[Abrir]({url})")
 # --- PIE DE PÁGINA ---
 st.markdown("---")
 st.caption("💗 Desarrollado por María José Velásquez — Portafolio de aplicaciones con IA 💻")
-
-
