@@ -1,80 +1,131 @@
 import streamlit as st
+from PIL import Image
 
-# --- Configuración de la página ---
-st.set_page_config(page_title="Portafolio María José", layout="wide")
-
-# --- Fondo rosado con el mismo estilo del anterior ---
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #ffe6f2;
-    }
-    .block-container {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    h1, h2, h3 {
-        color: #2b2b2b;
-    }
-    a {
-        color: #b30059;
-        font-weight: bold;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    .project-card {
-        background-color: #ffd6e8;
-        padding: 1rem;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-        margin-bottom: 1rem;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# 💗 --- ESTILO PERSONALIZADO (fondo rosado y sidebar) ---
+page_bg = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-color: #ffe6f2;
+    background-image: linear-gradient(135deg, #ffe6f2 0%, #ffd1e8 100%);
+}
+[data-testid="stHeader"] {
+    background: rgba(255, 192, 203, 0.6);
+}
+[data-testid="stSidebar"] {
+    background-color: #ffd6e7;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #c2185b;
+}
+a {
+    color: #ad1457 !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #880e4f !important;
+}
+</style>
+"""
+st.markdown(page_bg, unsafe_allow_html=True)
 
 # --- Título principal ---
-st.title("🌸 Portafolio de Proyectos - María José Velásquez")
+st.title("Aplicaciones de Inteligencia Artificial")
 
-# --- Lista de proyectos ---
-projects = [
-    {"name": "Chat PDF", "url": "https://chatpdf-bq2plpj6bfk7aqxej7u5pt.streamlit.app"},
-    {"name": "Hand_W", "url": "https://handw-6grwjkqfwizbsymcn2e4v4.streamlit.app"},
-    {"name": "OCR", "url": "https://ocr-rgzajcbk2kbsxjeztu2rxn.streamlit.app"},
-    {"name": "Ctrl_voice", "url": "https://ctrlvoice-3bq6eeg7pjij6zrw6tbsko.streamlit.app"},
-    {"name": "Imm1", "url": "https://imm1-4sgv6qqb7mms7qfkpz6y4b.streamlit.app"},
-    {"name": "OCR-Audio", "url": "https://ocr-audio-uf7ynfyx6r8nd2bx2zsgpd.streamlit.app"},
-    {"name": "Recep_MQTT", "url": "https://recep-mqtt-pn7tzgyavpvd5tk4q2h6wb.streamlit.app"},
-    {"name": "Send_CMqtt", "url": "https://send-cmqtt-8hrjcv7bjrqxh4kggx57zh.streamlit.app"},
-    {"name": "TF_IDF", "url": "https://tfidf-qfc4xxs7cdcb7ptkywn7gk.streamlit.app"},
-    {"name": "TM", "url": "https://tm-wxyhkcp7fgwks2k7rynxbg.streamlit.app"},
-    {"name": "Traductor", "url": "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"}
-]
+# --- Sidebar ---
+with st.sidebar:
+    st.subheader("Aplicaciones con Inteligencia Artificial")
+    parrafo = (
+        "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
+        "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
+        "resulta en una mayor eficiencia y precisión en diversos campos."
+    )
+    st.write(parrafo)
 
-# --- Mostrar en cuadrícula ajustada de 3 columnas ---
-cols = st.columns(3)
+# --- Enlace general ---
+url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
+st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
+st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
 
-for i, project in enumerate(projects):
-    col = cols[i % 3]
-    with col:
-        st.markdown(
-            f"""
-            <div class="project-card">
-                <h3>{project['name']}</h3>
-                <a href="{project['url']}" target="_blank">🔗 Enlace</a>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+# --- Columnas principales ---
+col1, col2, col3 = st.columns(3)
+
+# --- Columna 1 ---
+with col1:
+    st.subheader("Analisis de texto")
+    url = "https://dnmzepv2h4xmw6yxwzvcrr.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("Chat PDF")
+    url = "https://chatpdf-gwuf3xshqmb2cb4bjgkivd.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("Ctrl_voice")
+    url = "https://ctrlvoice-jjdnyj4h7uqjkzdzjndskm.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+# --- Columna 2 ---
+with col2:
+    st.subheader("Drawrecog")
+    url = "https://drawrecog-ftmxxecetrks53qqf7ep5x.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("Hand_W")
+    url = "https://mtubb8lilvvh68zsisjjhy.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("Imm1")
+    url = "https://aetvf8ckuvwtmhegftsne8.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+# --- Columna 3 ---
+with col3:
+    st.subheader("Intro")
+    url = "https://gnj4sr3tzwfb2tuwcru6in.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("OCR")
+    url = "https://4ohjzp2brxgz8xgirrhxz2.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("OCR-Audio")
+    url = "https://ocr-audio-4b6rtzrvvqybdrbkgxjvge.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("Recep_MQTT")
+    url = "https://recepmqtt-bkharxblreeetctedowmsr.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("Send_CMqtt")
+    url = "https://sendcmqtt-cvkmcjjdmz6lsgjgbuawix.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("TF_IDF")
+    url = "https://ckv67faaexydbykhj23gqb.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+    st.subheader("TM")
+    url = "https://g8ww5stpf5eekifywa5mbt.streamlit.app"
+    st.write(f"[Enlace]({url})")
+
+# --- Últimos proyectos debajo (sin vacío) ---
+st.subheader("Traductor")
+url = "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"
+st.write(f"[Enlace]({url})")
+
+st.subheader("Tx2_Analisis")
+url = "https://7ibuhcfwsvaamifxn984vx.streamlit.app"
+st.write(f"[Enlace]({url})")
+
+st.subheader("Vision_App")
+url = "https://visionapp-npw2s56o4vuqtnvrxrxv5n.streamlit.app"
+st.write(f"[Enlace]({url})")
+
+st.subheader("Yolov5")
+url = "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app"
+st.write(f"[Enlace]({url})")
 
 # --- Pie de página ---
 st.markdown("---")
-st.markdown(
-    "<p style='text-align:center; color:#444;'>✨ Portafolio desarrollado en Streamlit ✨</p>",
-    unsafe_allow_html=True
-)
+st.caption("💗 Desarrollado por María José Velásquez — Portafolio de aplicaciones con IA 💻")
