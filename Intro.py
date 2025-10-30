@@ -91,8 +91,6 @@ with col3:
  st.write(f" [Enlace]({url})")
   
  st.subheader("send_cmqtt  ")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
  url = "https://sendcmqtt-cvkmcjjdmz6lsgjgbuawix.streamlit.app"
  st.write(f" [Enlace]({url})")
 
