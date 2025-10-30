@@ -3,19 +3,19 @@ import streamlit as st
 # --- Configuración de la página ---
 st.set_page_config(page_title="Portafolio María José", layout="wide")
 
-# --- Fondo rosado con estilo limpio ---
+# --- Fondo rosado con el mismo estilo del anterior ---
 st.markdown(
     """
     <style>
     body {
-        background-color: #ffd6e8;
+        background-color: #ffe6f2;
     }
     .block-container {
-        padding-top: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
     h1, h2, h3 {
-        color: #3b3b3b;
-        text-align: center;
+        color: #2b2b2b;
     }
     a {
         color: #b30059;
@@ -25,6 +25,14 @@ st.markdown(
     a:hover {
         text-decoration: underline;
     }
+    .project-card {
+        background-color: #ffd6e8;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -33,7 +41,7 @@ st.markdown(
 # --- Título principal ---
 st.title("🌸 Portafolio de Proyectos - María José Velásquez")
 
-# --- Organización en cuadrícula ---
+# --- Lista de proyectos ---
 projects = [
     {"name": "Chat PDF", "url": "https://chatpdf-bq2plpj6bfk7aqxej7u5pt.streamlit.app"},
     {"name": "Hand_W", "url": "https://handw-6grwjkqfwizbsymcn2e4v4.streamlit.app"},
@@ -48,17 +56,25 @@ projects = [
     {"name": "Traductor", "url": "https://traductor-bnujsivx7ixvv2kbaphv7b.streamlit.app"}
 ]
 
-# --- Mostrar proyectos en una cuadrícula de 3 columnas ---
+# --- Mostrar en cuadrícula ajustada de 3 columnas ---
 cols = st.columns(3)
 
 for i, project in enumerate(projects):
-    with cols[i % 3]:
-        st.subheader(project["name"])
-        st.markdown(f"[🔗 Enlace]({project['url']})")
+    col = cols[i % 3]
+    with col:
+        st.markdown(
+            f"""
+            <div class="project-card">
+                <h3>{project['name']}</h3>
+                <a href="{project['url']}" target="_blank">🔗 Enlace</a>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
-# --- Mensaje final ---
+# --- Pie de página ---
 st.markdown("---")
 st.markdown(
-    "<p style='text-align:center; color:#555;'>✨ Portafolio desarrollado en Streamlit ✨</p>",
+    "<p style='text-align:center; color:#444;'>✨ Portafolio desarrollado en Streamlit ✨</p>",
     unsafe_allow_html=True
 )
