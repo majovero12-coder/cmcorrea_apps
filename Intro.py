@@ -21,30 +21,26 @@ with col1:
  st.subheader("Analisis de texto")
  image = Image.open('txt_to_audio2.png')
  st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
  url = "https://dnmzepv2h4xmw6yxwzvcrr.streamlit.app"
  st.write(f"Texto a voz: [Enlace]({url})")
 
- st.subheader("Reconocimiento de Objetos")
+ st.subheader("Chat PDF")
  image = Image.open('txt_to_audio.png')
  st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
+ url = "https://chatpdf-gwuf3xshqmb2cb4bjgkivd.streamlit.app"
  st.write(f"YOLO: [Enlace]({url})")
 
- st.subheader("Entrenando Modelos")
+ st.subheader("Ctrl_voice")
  image = Image.open('OIG5.jpg')
  st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
+ url = "https://ctrlvoice-jjdnyj4h7uqjkzdzjndskm.streamlit.app"
  st.write(f"YOLO: [Enlace]({url})")
 
 with col2: 
- st.subheader("Conversión de voz a texto")
+ st.subheader("drawrecog")
  image = Image.open('OIG8.jpg')
  st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductor-ab0sp9f6fi.streamlit.app/"
+ url = "https://drawrecog-ftmxxecetrks53qqf7ep5x.streamlit.app/"
  st.write(f"Voz a texto: [Enlace]({url})")
 
  st.subheader("Análisis de Datos")
