@@ -125,6 +125,6 @@ st.caption("💗 Desarrollado por María José Velásquez — Portafolio de apli
 
 
 st.subheader("yolov5 ")
- url = "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app"
+url = "https://yolov5-whntcxc7whqvtxa57gjal5.streamlit.app"
  st.write(f" [Enlace]({url})")
 
