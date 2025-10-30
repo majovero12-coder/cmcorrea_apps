@@ -22,40 +22,38 @@ with col1:
  image = Image.open('txt_to_audio2.png')
  st.image(image, width=190)
  url = "https://dnmzepv2h4xmw6yxwzvcrr.streamlit.app"
- st.write(f"Texto a voz: [Enlace]({url})")
+ st.write(f" [Enlace]({url})")
 
  st.subheader("Chat PDF")
  image = Image.open('txt_to_audio.png')
  st.image(image, width=200)
  url = "https://chatpdf-gwuf3xshqmb2cb4bjgkivd.streamlit.app"
- st.write(f"YOLO: [Enlace]({url})")
+ st.write(f" [Enlace]({url})")
 
  st.subheader("Ctrl_voice")
  image = Image.open('OIG5.jpg')
  st.image(image, width=200)
  url = "https://ctrlvoice-jjdnyj4h7uqjkzdzjndskm.streamlit.app"
- st.write(f"YOLO: [Enlace]({url})")
+ st.write(f" [Enlace]({url})")
 
 with col2: 
  st.subheader("drawrecog")
  image = Image.open('OIG8.jpg')
  st.image(image, width=200)
  url = "https://drawrecog-ftmxxecetrks53qqf7ep5x.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
+ st.write(f" [Enlace]({url})")
 
- st.subheader("Análisis de Datos")
+ st.subheader("hand_w")
  image = Image.open('data_analisis.png')
  st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://asistpy-csv.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
+ url = "https://mtubb8lilvvh68zsisjjhy.streamlit.app"
+ st.write(f" [Enlace]({url})")
 
- st.subheader("Trasnscriptor Audio y Video")
+ st.subheader("imm1")
  image = Image.open('OIG3.jpg')
  st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
+ url = "https://aetvf8ckuvwtmhegftsne8.streamlit.app"
+ st.write(f" [Enlace]({url})")
 
 
 with col3: 
